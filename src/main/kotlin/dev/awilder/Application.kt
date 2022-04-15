@@ -5,6 +5,7 @@ import io.micronaut.scheduling.annotation.Scheduled
 import jakarta.inject.Singleton
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import reactor.core.publisher.Mono
 
@@ -26,7 +27,8 @@ class Scheduler {
 	// doesn't work
 	@Scheduled(fixedDelay = "1s")
 	suspend fun suspendTest() {
-		println("Hello World")
+		delay(1000)
+		println("suspending Hello World")
 	}
 
 	// workaround?
