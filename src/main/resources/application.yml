@@ -1,0 +1,7 @@
+micronaut:
+  application:
+    name: scheduledKotlin
+netty:
+  default:
+    allocator:
+      max-order: 3
